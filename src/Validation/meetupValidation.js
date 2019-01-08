@@ -27,5 +27,5 @@ function validateMeetup(req, res, next) {
 }
 
 export {
-  checkMeetup,
+  validateMeetup,
 }

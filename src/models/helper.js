@@ -1,4 +1,4 @@
-import models from '../models/data';
+import models from './data';
 
 const {
   Meetup,
@@ -7,7 +7,7 @@ const {
   Rsvp,
 } = models;
 
-class Datastructure {
+class dataStructure {
   constructor() {
     this.meetups = [];
     this.questions = [];
@@ -127,7 +127,7 @@ class Datastructure {
   }) {
     const rsvpId = this.rsvps.length ? this.rsvps[this.rsvps.length - 1].id + 1 : 1;
     /**
-     * Check if this meetup exists
+     * Checking if this meetup exists
      */
     let meetup;
     for (let i = 0; i < this.meetups.length; i++) {
@@ -141,7 +141,7 @@ class Datastructure {
       error: 'No matching meetup'
     };
     /**
-     * Check if this user exists
+     * Checking if this user exists
      */
     let userExists = false;
     for (let i = 0; i < this.users.length; i++) {
@@ -168,4 +168,4 @@ class Datastructure {
   }
 }
 
-export default new Datastructure();
+export default new dataStructure();
