@@ -1,15 +1,15 @@
 import express from 'express';
-import meetupController from '../controllers/meetup';
+import controllerformeetup from '../controllers/controllerformeetup ';
 import {
-  checkMeetup
+  validateMeetup
 } from '../Validation/meetupValidation';
 
 const Router = express.Router();
 
-Router.get('/', meetupController.getAll);
-Router.post('/', checkMeetup, meetupController.create);
-Router.get('/upcoming', meetupController.getUpcoming);
-Router.get('/:meetupId', meetupController.getSingle);
-Router.post('/:meetupId/rsvps', meetupController.respondRsvp);
+Router.get('/', controllerformeetup.getAll);
+Router.post('/', validateMeetup, controllerformeetup.create);
+Router.get('/upcoming', controllerformeetup.getUpcoming);
+Router.get('/:meetupId', controllerformeetup.getSingle);
+Router.post('/:meetupId/rsvps', controllerformeetup.respondRsvp);
 
 export default Router;
