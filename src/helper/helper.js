@@ -168,4 +168,4 @@ class Datastructure {
   }
 }
 
-export default new Database();
+export default new Datastructure();
